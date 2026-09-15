@@ -1,0 +1,1461 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dr. Feel Good — Hypnotist | Pacific Northwest</title>
+  <meta name="description" content="Dr. Feel Good is Michael Cain — registered nurse, certified hypnotherapist, and stage hypnotist with 25+ years of experience. Serving the Pacific Northwest.">
+  <meta name="keywords" content="hypnotist Salem Oregon, stage hypnosis, hypnotherapy Salem OR, corporate hypnotist, graduation party hypnotist, Dr Feel Good">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --indigo: #1B1464;
+      --gold: #C9A84C;
+      --white: #FAF7F0;
+      --text: #2a2a2a;
+      --text-light: #666;
+      --gold-dark: #a8893c;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--white);
+      color: var(--text);
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    /* ── NAV ── */
+    nav {
+      background: var(--indigo);
+      padding: 0 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      height: 68px;
+    }
+
+    .nav-logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.4rem;
+      color: var(--gold);
+      text-decoration: none;
+      letter-spacing: 0.04em;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: var(--white);
+      text-decoration: none;
+      font-size: 0.85rem;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      opacity: 0.85;
+      transition: opacity 0.2s, color 0.2s;
+    }
+
+    .nav-links a:hover { opacity: 1; color: var(--gold); }
+
+    .nav-cta {
+      background: var(--gold);
+      color: var(--indigo) !important;
+      padding: 0.45rem 1.1rem;
+      border-radius: 3px;
+      font-weight: 600 !important;
+      opacity: 1 !important;
+      transition: background 0.2s !important;
+    }
+
+    .nav-cta:hover { background: var(--gold-dark) !important; }
+
+    /* ── SECTIONS ── */
+    section { display: none; }
+    section.active { display: block; }
+
+    /* ── HERO ── */
+    .hero {
+      background: var(--indigo);
+      color: var(--white);
+      padding: 6rem 2rem 5rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -40%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 700px;
+      height: 700px;
+      background: radial-gradient(circle, rgba(201,168,76,0.12) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero-eyebrow {
+      font-size: 0.75rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1.2rem;
+      font-weight: 500;
+    }
+
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(3rem, 8vw, 6rem);
+      font-weight: 900;
+      line-height: 1.05;
+      color: var(--white);
+      margin-bottom: 0.3rem;
+    }
+
+    .hero h1 span { color: var(--gold); }
+
+    .hero-subtitle {
+      font-size: clamp(1rem, 2.5vw, 1.25rem);
+      opacity: 0.75;
+      margin: 1.2rem auto 0.5rem;
+      max-width: 560px;
+      font-weight: 300;
+    }
+
+    .hero-tagline {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      color: var(--gold);
+      font-size: 1.1rem;
+      margin: 1rem 0 2.5rem;
+    }
+
+    .hero-creds {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+      margin-bottom: 2.5rem;
+    }
+
+    .cred-pill {
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(201,168,76,0.3);
+      color: var(--white);
+      font-size: 0.75rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 0.4rem 1rem;
+      border-radius: 2px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      background: var(--gold);
+      color: var(--indigo);
+      padding: 0.85rem 2.2rem;
+      border: none;
+      border-radius: 3px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background 0.2s;
+      display: inline-block;
+    }
+
+    .btn-primary:hover { background: var(--gold-dark); }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--white);
+      padding: 0.85rem 2.2rem;
+      border: 1px solid rgba(255,255,255,0.4);
+      border-radius: 3px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      cursor: pointer;
+      text-decoration: none;
+      transition: border-color 0.2s, color 0.2s;
+      display: inline-block;
+    }
+
+    .btn-outline:hover { border-color: var(--gold); color: var(--gold); }
+
+    /* ── THREE-WAY HERO CARDS ── */
+    .hero-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+      margin-top: 3rem;
+      padding: 0 2rem;
+      max-width: 1000px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .hero-card {
+      aspect-ratio: 1;
+      border-radius: 8px;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.3s, box-shadow 0.3s;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: var(--white);
+      font-weight: 600;
+      font-size: 1.3rem;
+      box-shadow: 0 8px 24px rgba(27,20,100,0.15);
+    }
+
+    .hero-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 16px 40px rgba(27,20,100,0.25);
+    }
+
+    .hero-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+    }
+
+    .hero-card-content {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.8rem;
+    }
+
+    .hero-card-icon {
+      font-size: 3rem;
+    }
+
+    .hero-card-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.6rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+    }
+
+    /* Card color variations */
+    .hero-card.entertainment::before {
+      background: linear-gradient(135deg, rgba(201,168,76,0.95) 0%, rgba(139,110,40,0.95) 100%);
+    }
+
+    .hero-card.wellness::before {
+      background: linear-gradient(135deg, rgba(27,20,100,0.9) 0%, rgba(66,54,156,0.9) 100%);
+    }
+
+    .hero-card.metaphysical::before {
+      background: linear-gradient(135deg, rgba(75,0,130,0.85) 0%, rgba(25,0,51,0.85) 100%);
+    }
+
+    /* ── SOCIAL PROOF STRIP ── */
+    .proof-strip {
+      background: var(--gold);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: center;
+      gap: 3rem;
+      flex-wrap: wrap;
+    }
+
+    .proof-item {
+      text-align: center;
+      color: var(--indigo);
+    }
+
+    .proof-number {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      font-weight: 700;
+      display: block;
+    }
+
+    .proof-label {
+      font-size: 0.7rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      font-weight: 600;
+      opacity: 0.8;
+    }
+
+    /* ── PILLARS ── */
+    .pillars {
+      padding: 5rem 2rem;
+      max-width: 1100px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .section-label {
+      font-size: 0.7rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      font-weight: 600;
+      margin-bottom: 0.8rem;
+    }
+
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      color: var(--indigo);
+      margin-bottom: 1rem;
+    }
+
+    .section-intro {
+      max-width: 600px;
+      margin: 0 auto 3rem;
+      color: var(--text-light);
+      font-size: 1.05rem;
+    }
+
+    .pillars-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+
+    .pillar-card {
+      border: 1px solid rgba(27,20,100,0.12);
+      border-radius: 4px;
+      padding: 2.5rem 2rem;
+      text-align: left;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+      background: var(--white);
+    }
+
+    .pillar-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 40px rgba(27,20,100,0.1);
+      border-color: var(--gold);
+    }
+
+    .pillar-icon {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .pillar-card h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.4rem;
+      color: var(--indigo);
+      margin-bottom: 0.5rem;
+    }
+
+    .pillar-card p { color: var(--text-light); font-size: 0.95rem; margin-bottom: 1.2rem; }
+
+    .pillar-link {
+      color: var(--gold);
+      font-size: 0.8rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    /* ── CLIENTS ── */
+    .clients {
+      background: var(--indigo);
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+
+    .clients .section-label { color: var(--gold); }
+    .clients .section-title { color: var(--white); margin-bottom: 2rem; }
+
+    .client-list {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .client-tag {
+      background: rgba(255,255,255,0.08);
+      color: rgba(255,255,255,0.75);
+      padding: 0.4rem 1rem;
+      border-radius: 2px;
+      font-size: 0.8rem;
+      letter-spacing: 0.04em;
+    }
+
+    /* ── TESTIMONIALS ── */
+    .testimonials {
+      padding: 5rem 2rem;
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+      margin-top: 3rem;
+    }
+
+    .testimonial {
+      background: var(--white);
+      border-left: 3px solid var(--gold);
+      padding: 1.5rem;
+      text-align: left;
+      border-radius: 0 4px 4px 0;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.06);
+    }
+
+    .testimonial p {
+      font-style: italic;
+      color: var(--text);
+      margin-bottom: 0.8rem;
+      font-size: 0.95rem;
+    }
+
+    .testimonial cite {
+      font-size: 0.75rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--gold);
+      font-weight: 600;
+      font-style: normal;
+    }
+
+    /* ── PAGE CONTENT ── */
+    .page-hero {
+      background: var(--indigo);
+      padding: 4rem 2rem 3rem;
+      text-align: center;
+      color: var(--white);
+    }
+
+    .page-hero .section-label { color: var(--gold); }
+
+    .page-hero h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      color: var(--white);
+      margin-bottom: 0.8rem;
+    }
+
+    .page-hero p {
+      max-width: 580px;
+      margin: 0 auto;
+      opacity: 0.75;
+      font-size: 1.05rem;
+    }
+
+    .page-content {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 4rem 2rem;
+    }
+
+    /* ── SHOW PAGE ── */
+    .show-packages {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.5rem;
+      margin: 3rem 0;
+    }
+
+    .package-card {
+      border: 1px solid rgba(27,20,100,0.15);
+      border-radius: 4px;
+      padding: 2rem;
+    }
+
+    .package-card.featured {
+      border-color: var(--gold);
+      background: linear-gradient(135deg, rgba(27,20,100,0.03), rgba(201,168,76,0.05));
+    }
+
+    .package-card h4 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.2rem;
+      color: var(--indigo);
+      margin-bottom: 0.3rem;
+    }
+
+    .package-price {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--gold);
+      margin-bottom: 1rem;
+    }
+
+    .package-card ul {
+      list-style: none;
+      color: var(--text-light);
+      font-size: 0.9rem;
+    }
+
+    .package-card ul li { padding: 0.3rem 0; padding-left: 1.2rem; position: relative; }
+    .package-card ul li::before { content: '—'; position: absolute; left: 0; color: var(--gold); }
+
+    /* ── WELLNESS PAGE ── */
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.5rem;
+      margin: 3rem 0;
+    }
+
+    .service-card {
+      background: var(--white);
+      border: 1px solid rgba(27,20,100,0.12);
+      border-radius: 4px;
+      padding: 2rem;
+      transition: border-color 0.2s;
+    }
+
+    .service-card:hover { border-color: var(--gold); }
+
+    .service-card h4 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.15rem;
+      color: var(--indigo);
+      margin-bottom: 0.5rem;
+    }
+
+    .service-card p { color: var(--text-light); font-size: 0.9rem; }
+
+    /* ── SHOP PAGE ── */
+    .shop-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 2rem;
+      margin: 3rem 0;
+    }
+
+    .shop-card {
+      border: 1px solid rgba(27,20,100,0.15);
+      border-radius: 4px;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .shop-card .product-icon { font-size: 2.5rem; margin-bottom: 1rem; }
+
+    .shop-card h4 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.2rem;
+      color: var(--indigo);
+      margin-bottom: 0.5rem;
+    }
+
+    .shop-card p { color: var(--text-light); font-size: 0.9rem; margin-bottom: 1rem; }
+
+    .product-price {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--gold);
+      margin-bottom: 1.2rem;
+    }
+
+    /* ── BEYOND PAGE ── */
+    .beyond-intro {
+      background: var(--indigo);
+      color: var(--white);
+      padding: 3rem;
+      border-radius: 4px;
+      margin-bottom: 3rem;
+    }
+
+    .beyond-intro h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      color: var(--gold);
+      margin-bottom: 1rem;
+    }
+
+    .beyond-intro p { opacity: 0.85; }
+
+    /* ── ABOUT PAGE ── */
+    .credentials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin: 2rem 0;
+    }
+
+    .credential-item {
+      background: var(--indigo);
+      color: var(--white);
+      padding: 1.2rem 1.5rem;
+      border-radius: 3px;
+    }
+
+    .credential-item strong {
+      display: block;
+      color: var(--gold);
+      font-size: 0.7rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 0.3rem;
+    }
+
+    /* ── CONTACT / BOOKING FORM ── */
+    .booking-form {
+      max-width: 640px;
+      margin: 3rem auto 0;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .form-field {
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+
+    .form-field.full { grid-column: 1 / -1; }
+
+    .form-field label {
+      font-size: 0.75rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-weight: 600;
+      color: var(--text-light);
+    }
+
+    .form-field input,
+    .form-field select,
+    .form-field textarea {
+      border: 1px solid rgba(27,20,100,0.2);
+      border-radius: 3px;
+      padding: 0.7rem 1rem;
+      font-size: 0.95rem;
+      font-family: 'Inter', sans-serif;
+      background: var(--white);
+      color: var(--text);
+      transition: border-color 0.2s;
+      width: 100%;
+    }
+
+    .form-field input:focus,
+    .form-field select:focus,
+    .form-field textarea:focus {
+      outline: none;
+      border-color: var(--gold);
+    }
+
+    .form-field textarea { height: 130px; resize: vertical; }
+
+    .form-note {
+      font-size: 0.8rem;
+      color: var(--text-light);
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--indigo);
+      color: rgba(255,255,255,0.6);
+      padding: 3rem 2rem 2rem;
+      text-align: center;
+    }
+
+    .footer-logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      color: var(--gold);
+      margin-bottom: 0.5rem;
+    }
+
+    .footer-tagline {
+      font-size: 0.8rem;
+      margin-bottom: 1.5rem;
+      font-style: italic;
+      opacity: 0.6;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      margin-bottom: 2rem;
+    }
+
+    .footer-links a {
+      color: rgba(255,255,255,0.5);
+      text-decoration: none;
+      font-size: 0.8rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      transition: color 0.2s;
+    }
+
+    .footer-links a:hover { color: var(--gold); }
+
+    .footer-legal {
+      font-size: 0.75rem;
+      opacity: 0.4;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      padding-top: 1.5rem;
+    }
+
+    /* ── DIVIDER ── */
+    .gold-divider {
+      width: 48px;
+      height: 2px;
+      background: var(--gold);
+      margin: 1.5rem auto;
+    }
+
+    /* ── PROSE ── */
+    .prose h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      color: var(--indigo);
+      margin: 2rem 0 0.8rem;
+    }
+
+    .prose p { color: var(--text-light); margin-bottom: 1.2rem; }
+
+    .prose blockquote {
+      border-left: 3px solid var(--gold);
+      padding-left: 1.5rem;
+      margin: 2rem 0;
+      font-style: italic;
+      color: var(--text);
+      font-size: 1.05rem;
+    }
+
+    /* ── EMAIL CAPTURE ── */
+    .email-capture {
+      background: var(--indigo);
+      padding: 4rem 2rem;
+      text-align: center;
+      color: var(--white);
+    }
+
+    .email-capture h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      color: var(--gold);
+      margin-bottom: 0.5rem;
+    }
+
+    .email-capture p { opacity: 0.75; margin-bottom: 1.5rem; }
+
+    .email-form {
+      display: flex;
+      gap: 0.5rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      max-width: 480px;
+      margin: 0 auto;
+    }
+
+    .email-form input {
+      flex: 1;
+      min-width: 220px;
+      padding: 0.75rem 1rem;
+      border: none;
+      border-radius: 3px;
+      font-size: 0.95rem;
+      font-family: 'Inter', sans-serif;
+    }
+
+    /* responsive */
+    @media (max-width: 600px) {
+      .nav-links { display: none; }
+      .form-grid { grid-template-columns: 1fr; }
+      .proof-strip { gap: 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ══ NAVIGATION ══ -->
+<nav>
+  <a href="#" class="nav-logo" onclick="showSection('home')">Dr. Feel Good</a>
+  <ul class="nav-links">
+    <li><a href="#" onclick="showSection('home')">Home</a></li>
+    <li><a href="#" onclick="showSection('show')">The Show</a></li>
+    <li><a href="#" onclick="showSection('wellness')">Wellness</a></li>
+    <li><a href="#" onclick="showSection('shop')">Shop</a></li>
+    <li><a href="#" onclick="showSection('beyond')">Beyond</a></li>
+    <li><a href="#" onclick="showSection('about')">About</a></li>
+    <li><a href="#" class="nav-cta" onclick="showSection('contact')">Book Now</a></li>
+  </ul>
+</nav>
+
+<!-- ══════════════════════════════════════════
+     HOME
+══════════════════════════════════════════ -->
+<section id="home" class="active">
+
+  <div class="hero">
+    <p class="hero-eyebrow">Pacific Northwest &nbsp;·&nbsp; Stage hypnosis &amp; online sessions</p>
+    <h1>Dr. Feel<br><span>Good</span></h1>
+    <p class="hero-subtitle">Registered Nurse · Certified Hypnotherapist · NLP Practitioner</p>
+    <p class="hero-tagline">"The Dr. is a wink. The credentials are real."</p>
+    <div class="hero-creds">
+      <span class="cred-pill">25+ Years Active</span>
+      <span class="cred-pill">Trained Under Ormond McGill</span>
+      <span class="cred-pill">Registered Nurse</span>
+      <span class="cred-pill">Certified Since 1999</span>
+    </div>
+    <div class="hero-buttons">
+      <a href="#" class="btn-primary" onclick="showSection('contact')">Book a Show</a>
+      <a href="#" class="btn-outline" onclick="showSection('shop')">Shop Wellness Audio</a>
+    </div>
+
+    <div class="hero-cards">
+      <div class="hero-card entertainment" onclick="showSection('show')">
+        <div class="hero-card-content">
+          <div class="hero-card-icon">🎭</div>
+          <div class="hero-card-title">Entertainment</div>
+          <p style="font-size: 0.85rem; opacity: 0.9;">Stage Shows & Events</p>
+        </div>
+      </div>
+
+      <div class="hero-card wellness" onclick="showSection('wellness')">
+        <div class="hero-card-content">
+          <div class="hero-card-icon">🧠</div>
+          <div class="hero-card-title">Wellness</div>
+          <p style="font-size: 0.85rem; opacity: 0.9;">Sessions & Audio</p>
+        </div>
+      </div>
+
+      <div class="hero-card metaphysical" onclick="showSection('beyond')">
+        <div class="hero-card-content">
+          <div class="hero-card-icon">🔮</div>
+          <div class="hero-card-title">Metaphysical</div>
+          <p style="font-size: 0.85rem; opacity: 0.9;">Past Life & Paranormal</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="proof-strip">
+    <div class="proof-item">
+      <span class="proof-number">25+</span>
+      <span class="proof-label">Years Experience</span>
+    </div>
+    <div class="proof-item">
+      <span class="proof-number">5.0</span>
+      <span class="proof-label">Average Rating</span>
+    </div>
+    <div class="proof-item">
+      <span class="proof-number">100+</span>
+      <span class="proof-label">Verified Bookings</span>
+    </div>
+    <div class="proof-item">
+      <span class="proof-number">FL→AK</span>
+      <span class="proof-label">Coast to Coast</span>
+    </div>
+  </div>
+
+  <div class="pillars">
+    <p class="section-label">What We Do</p>
+    <h2 class="section-title">Three Worlds. One Persona.</h2>
+    <p class="section-intro">Stage entertainment, therapeutic wellness, and paranormal exploration — unified by 25 years of genuine expertise and one disarmingly charismatic act.</p>
+    <div class="pillars-grid">
+      <div class="pillar-card" onclick="showSection('show')">
+        <div class="pillar-icon">🎭</div>
+        <h3>The Show</h3>
+        <p>Stage hypnosis that turns your audience into the stars. From grad parties to corporate stages — a performance nobody forgets.</p>
+        <a href="#" class="pillar-link" onclick="showSection('show')">Book a Show →</a>
+      </div>
+      <div class="pillar-card" onclick="showSection('wellness')">
+        <div class="pillar-icon">🧠</div>
+        <h3>Wellness</h3>
+        <p>Therapeutic hypnosis and audio programs made by someone who has actually treated patients. No miracle claims. Real clinical grounding.</p>
+        <a href="#" class="pillar-link" onclick="showSection('wellness')">Explore Wellness →</a>
+      </div>
+      <div class="pillar-card" onclick="showSection('beyond')">
+        <div class="pillar-icon">🔮</div>
+        <h3>Beyond</h3>
+        <p>Past life regression, paranormal investigation with N.O.P.E., and the Oregon Ghost Conference circuit. He's not performing for this crowd — he's one of them.</p>
+        <a href="#" class="pillar-link" onclick="showSection('beyond')">Go Beyond →</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="clients">
+    <p class="section-label">Past Clients</p>
+    <h2 class="section-title">They Trusted the Show</h2>
+    <div class="client-list">
+      <span class="client-tag">Microsoft</span>
+      <span class="client-tag">Boeing</span>
+      <span class="client-tag">Costco</span>
+      <span class="client-tag">U.S. Navy</span>
+      <span class="client-tag">Bethany Foundation</span>
+      <span class="client-tag">Epilepsy Foundation</span>
+      <span class="client-tag">Las Vegas Events</span>
+      <span class="client-tag">Colleges & Universities</span>
+      <span class="client-tag">Law Firms</span>
+      <span class="client-tag">Investment Firms</span>
+      <span class="client-tag">High School Grad Parties</span>
+      <span class="client-tag">Corporate Functions</span>
+    </div>
+  </div>
+
+  <div class="testimonials">
+    <p class="section-label">What People Say</p>
+    <h2 class="section-title">Don't Take Our Word For It</h2>
+    <div class="gold-divider"></div>
+    <div class="testimonials-grid">
+      <div class="testimonial">
+        <p>"Dr Feel Good gave a stellar performance!"</p>
+        <cite>Jimmy C. — Hollywood, CA</cite>
+      </div>
+      <div class="testimonial">
+        <p>"Dr Feel Good is a True Professional! — and one hell of a nice guy to work with."</p>
+        <cite>Chuck M. — Las Vegas, NV</cite>
+      </div>
+      <div class="testimonial">
+        <p>"One of the funniest shows I have seen in years."</p>
+        <cite>John M. — Mount Vernon, WA</cite>
+      </div>
+      <div class="testimonial">
+        <p>"The kids want him back for the graduation cruise!"</p>
+        <cite>Ron S. — Everett, WA</cite>
+      </div>
+    </div>
+  </div>
+
+  <div class="email-capture">
+    <h3>New Audio Releases & Show Dates</h3>
+    <p>Be first to know when new wellness programs drop and when Dr. Feel Good is performing near you.</p>
+    <div class="email-form">
+      <input type="email" placeholder="Your email address">
+      <button class="btn-primary" type="button">Stay in the Loop</button>
+    </div>
+  </div>
+
+</section>
+
+<!-- ══════════════════════════════════════════
+     THE SHOW
+══════════════════════════════════════════ -->
+<section id="show">
+
+  <div class="page-hero">
+    <p class="section-label">Stage Hypnosis</p>
+    <h2>The Show</h2>
+    <p>Your people become the stars. Comedy, wonder, and audience transformation — live and completely unforgettable.</p>
+  </div>
+
+  <div class="page-content">
+    <div class="prose">
+      <p>Some hypnotists read a book and hung a shingle. Michael Cain spent a week in Las Vegas with Ormond McGill — The Dean of American Hypnotists — and Jerry Valley, got certified in 1999, and has spent 25 years performing from grad parties to Fortune 500 stages. He's performed from Florida to Alaska and Las Vegas, and he knows how to read a room.</p>
+
+      <blockquote>"I've performed for Fortune 500s and high school auditoriums. Your audience is in good hands."</blockquote>
+
+      <p>The show is clean, professional, and suitable for all ages — though it tends to be most appreciated by high school through adult audiences. Every performance is customized to your event and your crowd. Nothing offensive. Nothing that'll make Monday awkward.</p>
+
+      <h3>What Hypnosis Won't Do</h3>
+      <p>I've been hypnotizing my daughter since she was ten. She's 32 now. Still won't do the dishes. Just so we're clear on the limitations.</p>
+      <p>Hypnosis doesn't make people do things against their will. I had the CFO of a major tech company on stage once — she was a great sport and one of the funniest volunteers I've ever worked with. After the show she told me it was the best corporate event they'd had in years. I may have mentioned, purely in the spirit of the evening, that her checkbook was right there. She laughed. The check did not grow. Some suggestions just don't take.</p>
+      <p>What it does do is create genuine, memorable, often hilarious experiences that your audience will talk about for years. Volunteers remain fully in control — they just happen to be very, very relaxed about it.</p>
+
+      <h3>Who Books This Show</h3>
+      <p>Graduation parties, corporate events, colleges and universities, theaters, festivals, team-building events, fraternity and sorority functions, community events, and anyone who wants their guests talking about it for years.</p>
+    </div>
+
+    <div class="show-packages">
+      <div class="package-card">
+        <h4>Grad Party / Private Event</h4>
+        <div class="package-price">$1,500–$2,000</div>
+        <ul>
+          <li>60–90 minute performance</li>
+          <li>Setup and breakdown included</li>
+          <li>Clean, all-ages content</li>
+          <li>BOR audio cards available</li>
+        </ul>
+      </div>
+      <div class="package-card">
+        <h4>Schools / Nonprofits</h4>
+        <div class="package-price">$1,200–$1,500</div>
+        <ul>
+          <li>Assembly or evening show formats</li>
+          <li>Educational framing available</li>
+          <li>Post-show Q&A available</li>
+          <li>Clean, all-ages content guaranteed</li>
+        </ul>
+      </div>
+      <div class="package-card featured">
+        <h4>Corporate Direct</h4>
+        <div class="package-price">$3,000–$5,000</div>
+        <ul>
+          <li>Fully customized content</li>
+          <li>Company and industry tailored</li>
+          <li>Liability documentation available</li>
+          <li>CEO-safe, HR-approved</li>
+          <li>Available as keynote or entertainment</li>
+        </ul>
+      </div>
+      <div class="package-card">
+        <h4>Conference / Keynote</h4>
+        <div class="package-price">$5,000–$7,500</div>
+        <ul>
+          <li>Keynote or closing entertainment</li>
+          <li>Registered Nurse framing available</li>
+          <li>Custom content for your industry</li>
+          <li>Rider and tech requirements provided</li>
+        </ul>
+      </div>
+    </div>
+
+    <div style="text-align:center; margin-top: 2rem;">
+      <a href="#" class="btn-primary" onclick="showSection('contact')">Request a Quote</a>
+    </div>
+
+    <div class="testimonials-grid" style="margin-top: 3rem;">
+      <div class="testimonial">
+        <p>"Dr Feel Good gave a stellar performance!"</p>
+        <cite>Jimmy C. — Hollywood, CA</cite>
+      </div>
+      <div class="testimonial">
+        <p>"One hell of a nice guy to work with."</p>
+        <cite>Chuck M. — Las Vegas, NV</cite>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<!-- ══════════════════════════════════════════
+     WELLNESS
+══════════════════════════════════════════ -->
+<section id="wellness">
+
+  <div class="page-hero">
+    <p class="section-label">Clinical Hypnosis</p>
+    <h2>Wellness</h2>
+    <p>Hypnosis made by someone who has actually treated patients. No miracle claims. Just 25 years of clinical experience and a psych RN who knows how the brain actually works.</p>
+  </div>
+
+  <div class="page-content">
+    <div class="prose">
+      <blockquote>"The psych RN credential is the differentiator. Most hypnosis apps are made by someone with a weekend certificate. This isn't that."</blockquote>
+
+      <p>Clinical hypnosis works best as part of a broader process — not a magic switch. Michael is honest about that, which is apparently rare in this field. If you've been burned by overblown promises before, you're in the right place.</p>
+
+      <h3>1-on-1 & Zoom Sessions</h3>
+      <p>Personalized sessions for behavioral change, anxiety management, PTSD support, habit modification, and more. Online sessions throughout the Pacific Northwest.</p>
+      <p style="color: var(--gold); font-weight: 600;">$225 initial session (90–120 min) &nbsp;·&nbsp; $195 follow-up sessions</p>
+      <p style="color: var(--gold); font-weight: 600;">The Reset — 3 sessions: $595 &nbsp;·&nbsp; The Full Protocol — 5 sessions: $975</p>
+      <p style="font-size:0.9rem; color:var(--text-light); margin-top:0.3rem;">I work with a maximum of five sessions per issue. If we can't create meaningful, lasting change in that window, I'll tell you honestly — and refer you to someone better suited. That's not a limitation. That's a commitment to your time and your results.</p>
+    </div>
+
+    <div class="service-grid">
+      <div class="service-card">
+        <h4>Quit Smoking</h4>
+        <p>One-on-one sessions are the primary method. Audio programs serve as maintenance and reinforcement tools — and we're explicit about that distinction.</p>
+      </div>
+      <div class="service-card">
+        <h4>Weight Management</h4>
+        <p>Behavioral change at the subconscious level. Addresses the patterns, not just the symptoms.</p>
+      </div>
+      <div class="service-card">
+        <h4>Anxiety & Stress</h4>
+        <p>Clinically informed approaches from a registered nurse with decades of patient experience.</p>
+      </div>
+      <div class="service-card">
+        <h4>Sleep & Insomnia</h4>
+        <p><em>Give Insomnia the Finger</em> &mdash; two sessions for sleep, available now in the shop.</p>
+      </div>
+      <div class="service-card">
+        <h4>PTSD Support</h4>
+        <p>"I Don't Want to Talk About It" &mdash; a dedicated program for military and first responders. <strong>Available now in the shop.</strong></p>
+      </div>
+      <div class="service-card">
+        <h4>Confidence & Performance</h4>
+        <p>Stage fright, public speaking, athletic performance, self-esteem. The subconscious is trainable.</p>
+      </div>
+    </div>
+
+    <div style="text-align:center; margin-top: 2rem; display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
+      <a href="#" class="btn-primary" onclick="showSection('contact')">Book a Session</a>
+      <a href="#" class="btn-outline" onclick="showSection('shop')" style="color:var(--indigo); border-color:var(--indigo)">Browse Audio Programs</a>
+    </div>
+  </div>
+
+</section>
+
+<!-- ══════════════════════════════════════════
+     SHOP
+══════════════════════════════════════════ -->
+<section id="shop">
+
+  <div class="page-hero">
+    <p class="section-label">Wellness Audio</p>
+    <h2>The Shop</h2>
+    <p>Clinically informed hypnosis audio — made by a registered nurse and certified hypnotherapist with 25 years of patient experience. Instant digital delivery.</p>
+  </div>
+
+  <div class="page-content">
+
+    <div class="prose" style="text-align:center; margin-bottom: 1rem;">
+      <p>These are honest tools for real behavioral change — not $9.99 apps with stock music and vague promises. Most effective as reinforcement following one-on-one sessions, though many people find them valuable on their own.</p>
+    </div>
+
+    <div class="shop-grid">
+      <div class="shop-card">
+        <div class="product-icon">🌙</div>
+        <h4>Give Insomnia the Finger</h4>
+        <p><strong>Two sessions.</strong> The first settles the body and quiets the loop. The second is an eye-fixation induction you can keep using on your own, long after the recording stops. Clinically grounded, no filler, no promises it can't keep.</p>
+        <p style="margin:0.6rem 0 0.2rem; font-size:0.85rem; color:var(--gold); letter-spacing:0.05em;">&#9733;&#9733;&#9733;&#9733;&#9733; <span style="color:var(--text-light); letter-spacing:0; font-size:0.8rem;">5.0 on Audible &middot; 9 ratings</span></p>
+        <audio controls style="width:100%; margin:1rem 0; border-radius:4px;"><source src="sample-insomnia.mp3" type="audio/mpeg">Your browser does not support the audio element.</audio>
+        <div class="product-price">$24.99</div>
+        <a href="https://payhip.com/b/DR1YZ" target="_blank" class="btn-primary" style="width:100%; text-align:center; display:block;">Buy Now</a>
+        <p style="font-size:0.75rem; margin-top:0.8rem; color:var(--text-light);">Instant digital delivery &middot; 2 sessions &middot; 36 minutes &middot; MP3</p>
+      </div>
+      <div class="shop-card">
+        <div class="product-icon">🎖️</div>
+        <h4>I Don't Want to Talk About It</h4>
+        <p>Hypnosis for PTSD, for military and first responders. Twenty minutes that ask you to describe nothing, relive nothing, and explain yourself to no one.</p>
+        <audio controls style="width:100%; margin:1rem 0; border-radius:4px;"><source src="sample-ptsd.mp3" type="audio/mpeg">Your browser does not support the audio element.</audio>
+        <div class="product-price">$19.95</div>
+        <a href="https://payhip.com/b/ExaHR" target="_blank" class="btn-primary" style="width:100%; text-align:center; display:block;">Buy Now</a>
+        <p style="font-size:0.75rem; margin-top:0.8rem; color:var(--text-light);">Instant digital delivery &middot; 20:26 &middot; MP3</p>
+        <p style="font-size:0.75rem; margin-top:0.5rem; color:var(--text-light);">In crisis? Call or text <strong>988</strong>, press 1 &mdash; Veterans Crisis Line.</p>
+      </div>
+      <div class="shop-card">
+        <div class="product-icon">🪞</div>
+        <h4>The Mirror Session</h4>
+        <p>Guided hypnosis for confidence, self-image & personal transformation. Meet the woman you're about to become — she's already in there.</p>
+        <audio controls style="width:100%; margin:1rem 0; border-radius:4px;"><source src="sample-mirror.mp3" type="audio/mpeg">Your browser does not support the audio element.</audio>
+        <div class="product-price">$19.95</div>
+        <a href="https://payhip.com/b/0BQnj" target="_blank" class="btn-primary" style="width:100%; text-align:center; display:block;">Buy Now</a>
+        <p style="font-size:0.75rem; margin-top:0.8rem; color:var(--text-light);">Instant digital delivery</p>
+      </div>
+    </div>
+
+    <div style="background:var(--indigo); color:var(--white); padding:2rem; border-radius:4px; margin-top:2rem; text-align:center;">
+      <p style="color:var(--gold); font-family:'Playfair Display',serif; font-size:1.3rem; margin-bottom:0.5rem;">At a Live Show?</p>
+      <p style="opacity:0.8; font-size:0.9rem;">If you just saw the show, scan the QR card for show-night pricing. Audience members get the best deal — you just witnessed the work firsthand.</p>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ══════════════════════════════════════════
+     BEYOND
+══════════════════════════════════════════ -->
+<section id="beyond">
+
+  <div class="page-hero">
+    <p class="section-label">Paranormal · Past Life · The Unexplained</p>
+    <h2>Beyond</h2>
+    <p>This isn't a performance for this crowd. Michael's one of them.</p>
+  </div>
+
+  <div class="page-content">
+
+    <div class="beyond-intro">
+      <h3>N.O.P.E. — Northern Oregon Paranormal Explorers</h3>
+      <p>Michael is a co-investigator with N.O.P.E. (Northern Oregon Paranormal Explorers) — actively investigating locations across the Pacific Northwest. This isn't a side project. It's a second life that happens to share a nervous system with the first one.</p>
+      <p><a href="#" class="pillar-link" onclick="showSection('nope')" style="color:var(--gold)">Inside N.O.P.E. &rarr;</a></p>
+    </div>
+
+    <div class="prose">
+      <h3>Oregon Ghost Conference</h3>
+      <p>Michael facilitates past life regression experiences at the Oregon Ghost Conference circuit — one of the most respected paranormal event platforms in the region. For attendees, it's one of the most memorable sessions of the weekend.</p>
+
+      <h3>Past Life Regression</h3>
+      <p>Group and individual past life regression sessions. Available at events, conferences, and by appointment via Zoom.</p>
+      <p style="color:var(--gold); font-weight:600;">$75 – $150 per person &nbsp;·&nbsp; Group rates available</p>
+
+      <h3>The Book</h3>
+      <p><em>Banish the Unwanted: Ancient Spells and Rituals for a Spirit-Free Life</em> &mdash; a collection of banishing rituals from across the globe and cultures.</p>
+      <p><a href="#" class="pillar-link" onclick="showSection('nope')">Read about N.O.P.E. and the book &rarr;</a></p>
+
+      <blockquote>"He's not performing for this crowd — he's one of them."</blockquote>
+
+      <h3>The Crossover</h3>
+      <p>The paranormal audience and the hypnosis audience overlap more than you'd think. Hypnosis, past life regression, and paranormal investigation are all explorations of the same territory — the edges of what the mind can perceive and experience. Michael operates credibly in all three because he doesn't separate them artificially.</p>
+    </div>
+
+    <div style="text-align:center; margin-top:2rem;">
+      <a href="#" class="btn-primary" onclick="showSection('contact')">Book a Past Life Session</a>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ══════════════════════════════════════════
+     N.O.P.E.
+══════════════════════════════════════════ -->
+<section id="nope">
+
+  <div class="page-hero">
+    <p class="section-label">Northern Oregon Paranormal Explorers</p>
+    <h2>N.O.P.E.</h2>
+    <p>Field investigation across the Pacific Northwest — with the controls most of this field skips.</p>
+  </div>
+
+  <div class="page-content">
+
+    <div class="beyond-intro">
+      <h3>What N.O.P.E. actually does</h3>
+      <p>Overnight audio and video captures at locations across the Pacific Northwest. Multiple recorders, timestamped, hashed at acquisition, reviewed frame by frame. Michael is a co-investigator — this isn't a side project, it's a second life that happens to share a nervous system with the first one.</p>
+    </div>
+
+    <div class="prose">
+
+      <h3>The part nobody else publishes</h3>
+      <p>Most paranormal groups run a detector across eight hours of audio, keep the forty hits that sound like something, and show you those. Nobody runs the empty room first.</p>
+      <p>We do. Same location, same gear, same settings, nobody inside. If the detector fires just as often with the house empty, that number is the most important thing in the recording — and it goes in the write-up alongside the clip. Every file is hashed when it comes off the recorder, so the copy you're shown is provably the copy that was captured.</p>
+      <p>That's not scepticism for its own sake. It's the only way a clip means anything.</p>
+
+      <h3>The book</h3>
+      <p><em>Banish the Unwanted: Ancient Spells and Rituals for a Spirit-Free Life</em> &mdash; a collection of banishing rituals from across the globe and cultures.</p>
+      <p><a class="btn-outline" href="https://www.amazon.com/Banish-unwanted-ANCIENT-RITUALS-SPIRIT/dp/B0BT72XKFQ" style="display:inline-block; color:var(--indigo); border-color:var(--indigo)">Find it on Amazon</a></p>
+
+      <h3>Events</h3>
+      <p>Michael facilitates past life regression at the Oregon Ghost Conference circuit and at paranormal events throughout the region. Group and individual sessions, $75&ndash;$150 per person, group rates available.</p>
+
+      <blockquote>"He's not performing for this crowd &mdash; he's one of them."</blockquote>
+
+      <h3>Where this sits next to the rest of the work</h3>
+      <p>Michael is a registered nurse and a certified hypnotherapist, and he does not pretend the two halves of his life are strangers. But he is precise about the line between them: <strong>hypnosis is an experience of the mind, not a door to anything.</strong> Past life regression is a guided experience, offered as one. Nothing here claims trance contacts, attracts or opens you to anything &mdash; and nothing on the clinical side borrows a word from this page.</p>
+      <p>If you came in through this door and what you actually want is help sleeping, or the 3am loop shut off, that work is on the other side of the site and it has none of this in it.</p>
+
+    </div>
+
+    <div style="text-align:center; margin-top:2rem;">
+      <a href="#" class="btn-primary" onclick="showSection('wellness')">The Wellness Side</a>
+      <a href="#" class="btn-outline" onclick="showSection('beyond')" style="color:var(--indigo); border-color:var(--indigo)">Back to Beyond</a>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ══════════════════════════════════════════
+     ABOUT
+══════════════════════════════════════════ -->
+<section id="about">
+
+  <div class="page-hero">
+    <p class="section-label">The Man Behind the Name</p>
+    <h2>About Dr. Feel Good</h2>
+    <p>Michael Cain (no relation).</p>
+  </div>
+
+  <div class="page-content">
+
+    <div class="prose">
+      <blockquote>"Some hypnotists read a book and hung a shingle. Michael Cain spent a week in Las Vegas with Ormond McGill — The Dean of American Hypnotists — and Jerry Valley, got certified in 1999, spent 25 years performing from grad parties to corporate stages to Vegas, and somewhere along the way also became a registered nurse working in psychiatric care, and an NLP practitioner."</blockquote>
+
+      <p>His stage name is Dr. Feel Good. The PhD is from Universal Life Seminary and very much tongue in cheek. The rest of it is completely real.</p>
+
+      <p>He also investigates the paranormal with N.O.P.E., facilitates past life regressions at the Oregon Ghost Conference, and genuinely believes hypnosis can change lives — and is honest about exactly when it can and when it can't.</p>
+
+      <p>In a field full of overblown promises, that honesty is apparently his most unusual credential.</p>
+
+      <h3>The Credentials</h3>
+    </div>
+
+    <div class="credentials-grid">
+      <div class="credential-item">
+        <strong>Certified Since</strong>
+        Certified Hypnotherapist, 1999
+      </div>
+      <div class="credential-item">
+        <strong>Clinical Background</strong>
+        Registered Nurse
+      </div>
+      <div class="credential-item">
+        <strong>NLP</strong>
+        NLP Practitioner
+      </div>
+      <div class="credential-item">
+        <strong>Training</strong>
+        Ormond McGill & Jerry Valley, Las Vegas
+      </div>
+      <div class="credential-item">
+        <strong>Performance Range</strong>
+        Florida · Alaska · Las Vegas
+      </div>
+      <div class="credential-item">
+        <strong>Paranormal</strong>
+        Co-Investigator, N.O.P.E.
+      </div>
+      <div class="credential-item">
+        <strong>Regression</strong>
+        Past Life Regression Facilitator
+      </div>
+      <div class="credential-item">
+        <strong>Conference</strong>
+        Oregon Ghost Conference
+      </div>
+    </div>
+
+    <div class="prose" style="margin-top:2rem;">
+      <h3>The Short Version</h3>
+      <p>Michael Cain (no relation) has been hypnotizing audiences from Florida to Alaska and Las Vegas for over 25 years. Trained directly under the legendary Ormond McGill and Jerry Valley, he's a registered nurse, certified hypnotherapist, and NLP practitioner who somehow makes all of that sound like a party. He does. We checked.</p>
+    </div>
+
+    <div style="text-align:center; margin-top:2rem;">
+      <a href="#" class="btn-primary" onclick="showSection('contact')">Get in Touch</a>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ══════════════════════════════════════════
+     CONTACT
+══════════════════════════════════════════ -->
+<section id="contact">
+
+  <div class="page-hero">
+    <p class="section-label">Bookings & Inquiries</p>
+    <h2>Let's Talk</h2>
+    <p>For show bookings, session inquiries, or anything else — fill out the form and expect a real response from a real person.</p>
+  </div>
+
+  <div class="page-content">
+    <div class="booking-form">
+      <div class="form-grid">
+        <div class="form-field">
+          <label>First Name</label>
+          <input type="text" placeholder="Jane">
+        </div>
+        <div class="form-field">
+          <label>Last Name</label>
+          <input type="text" placeholder="Smith">
+        </div>
+        <div class="form-field full">
+          <label>Email</label>
+          <input type="email" placeholder="jane@example.com">
+        </div>
+        <div class="form-field full">
+          <label>Phone (optional)</label>
+          <input type="tel" placeholder="(503) 555-0100">
+        </div>
+        <div class="form-field full">
+          <label>I'm inquiring about</label>
+          <select>
+            <option value="">Select one...</option>
+            <option>Stage Show Booking</option>
+            <option>Corporate Event</option>
+            <option>College / University Show</option>
+            <option>1-on-1 Wellness Session</option>
+            <option>Past Life Regression</option>
+            <option>Zoom Session</option>
+            <option>Something Else</option>
+          </select>
+        </div>
+        <div class="form-field full">
+          <label>Event Date (if applicable)</label>
+          <input type="date">
+        </div>
+        <div class="form-field full">
+          <label>Tell me about your event or what you're looking for</label>
+          <textarea placeholder="Event type, location, approximate audience size, any questions..."></textarea>
+        </div>
+      </div>
+      <p class="form-note">Pacific Northwest · Online sessions · Response within 24 hours</p>
+      <div style="text-align:center;">
+        <button class="btn-primary" type="button" style="font-size:1rem; padding:1rem 3rem;">Send Inquiry</button>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<!-- ══ FOOTER ══ -->
+<footer>
+  <div class="footer-logo">Dr. Feel Good</div>
+  <p class="footer-tagline">The Dr. is a wink. The credentials are real.</p>
+  <div class="footer-links">
+    <a href="#" onclick="showSection('show')">The Show</a>
+    <a href="#" onclick="showSection('wellness')">Wellness</a>
+    <a href="#" onclick="showSection('shop')">Shop</a>
+    <a href="#" onclick="showSection('beyond')">Beyond</a>
+    <a href="#" onclick="showSection('about')">About</a>
+    <a href="#" onclick="showSection('contact')">Contact</a>
+  </div>
+  <p class="footer-legal">© 2026 Dr. Feel Good · Michael Cain · Pacific Northwest · drfeelgoodhypnotist.com<br>Registered Nurse · Certified Hypnotherapist · NLP Practitioner</p>
+</footer>
+
+<script>
+  function showSection(id) {
+    document.querySelectorAll('section').forEach(s => s.classList.remove('active'));
+    document.getElementById(id).classList.add('active');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    return false;
+  }
+
+  // prevent default on all internal nav links
+  document.querySelectorAll('a[onclick]').forEach(a => {
+    a.addEventListener('click', e => e.preventDefault());
+  });
+
+  // --- deep linking: let /#shop, /#wellness etc. land on the right section ---
+  function sectionFromHash() {
+    var id = (window.location.hash || '').replace('#', '').trim();
+    if (id && document.getElementById(id) && document.getElementById(id).tagName === 'SECTION') {
+      showSection(id);
+      return true;
+    }
+    return false;
+  }
+  sectionFromHash();
+  window.addEventListener('hashchange', sectionFromHash);
+
+  // keep the address bar in step so links can be copied and shared
+  var _show = showSection;
+  showSection = function (id) {
+    var r = _show(id);
+    try { history.replaceState(null, '', '#' + id); } catch (e) {}
+    return r;
+  };
+</script>
+
+</body>
+</html>
+
