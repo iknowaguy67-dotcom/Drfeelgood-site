@@ -964,10 +964,13 @@
   <div class="email-capture">
     <h3>New Audio Releases & Show Dates</h3>
     <p>Be first to know when new wellness programs drop and when Dr. Feel Good is performing near you.</p>
-    <div class="email-form">
-      <input type="email" placeholder="Your email address">
-      <button class="btn-primary" type="button">Stay in the Loop</button>
-    </div>
+    <form class="email-form nf-form" name="newsletter" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+      <input type="hidden" name="form-name" value="newsletter">
+      <p hidden><label>Leave blank <input name="bot-field"></label></p>
+      <input type="email" name="email" placeholder="Your email address" required>
+      <button class="btn-primary" type="submit">Stay in the Loop</button>
+    </form>
+    <p class="nf-status" aria-live="polite"></p>
   </div>
 
 </section>
@@ -1358,27 +1361,29 @@
   </div>
 
   <div class="page-content">
-    <div class="booking-form">
+    <form class="booking-form nf-form" name="inquiry" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+      <input type="hidden" name="form-name" value="inquiry">
+      <p hidden><label>Leave blank <input name="bot-field"></label></p>
       <div class="form-grid">
         <div class="form-field">
           <label>First Name</label>
-          <input type="text" placeholder="Jane">
+          <input type="text" name="first_name" placeholder="Jane" required>
         </div>
         <div class="form-field">
           <label>Last Name</label>
-          <input type="text" placeholder="Smith">
+          <input type="text" name="last_name" placeholder="Smith">
         </div>
         <div class="form-field full">
           <label>Email</label>
-          <input type="email" placeholder="jane@example.com">
+          <input type="email" name="email" placeholder="jane@example.com" required>
         </div>
         <div class="form-field full">
           <label>Phone (optional)</label>
-          <input type="tel" placeholder="(503) 555-0100">
+          <input type="tel" name="phone" placeholder="(503) 555-0100">
         </div>
         <div class="form-field full">
           <label>I'm inquiring about</label>
-          <select>
+          <select name="inquiry_type">
             <option value="">Select one...</option>
             <option>Stage Show Booking</option>
             <option>Corporate Event</option>
@@ -1391,18 +1396,19 @@
         </div>
         <div class="form-field full">
           <label>Event Date (if applicable)</label>
-          <input type="date">
+          <input type="date" name="event_date">
         </div>
         <div class="form-field full">
           <label>Tell me about your event or what you're looking for</label>
-          <textarea placeholder="Event type, location, approximate audience size, any questions..."></textarea>
+          <textarea name="message" placeholder="Event type, location, approximate audience size, any questions..."></textarea>
         </div>
       </div>
       <p class="form-note">Pacific Northwest · Online sessions · Response within 24 hours</p>
       <div style="text-align:center;">
-        <button class="btn-primary" type="button" style="font-size:1rem; padding:1rem 3rem;">Send Inquiry</button>
+        <button class="btn-primary" type="submit" style="font-size:1rem; padding:1rem 3rem;">Send Inquiry</button>
       </div>
-    </div>
+      <p class="nf-status" aria-live="polite" style="text-align:center;"></p>
+    </form>
   </div>
 
 </section>
@@ -1454,6 +1460,29 @@
     try { history.replaceState(null, '', '#' + id); } catch (e) {}
     return r;
   };
+
+  // --- forms: submit to Netlify Forms without leaving the page ---
+  document.querySelectorAll('form.nf-form').forEach(function (f) {
+    f.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var btn = f.querySelector('button[type=submit]');
+      var status = f.querySelector('.nf-status') || f.nextElementSibling;
+      btn.disabled = true;
+      fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(new FormData(f)).toString()
+      }).then(function (r) {
+        if (!r.ok) throw new Error(r.status);
+        f.reset();
+        status.textContent = f.name === 'newsletter'
+          ? "You're on the list. Thanks!"
+          : "Got it — thank you. You'll hear back from a real person within 24 hours.";
+      }).catch(function () {
+        status.textContent = "Something went wrong sending that. Please email michael@pnwhypnosis.com instead.";
+      }).finally(function () { btn.disabled = false; });
+    });
+  });
 </script>
 
 </body>
